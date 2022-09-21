@@ -11,9 +11,21 @@
 
 html{ font-size: 20px } /* 폰트 기준 */
 
+
 body{
-	font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'Maven Pro','Noto Sans KR', sans-serif;
 	font-size : .7rem;	/* 14px로 렌더링 */
 	font-weight: 400; /* 100~900, bold, bolder, thin */
 	color: var(--base-text-color);
+}
+
+.d-none{
+	display: none;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
