@@ -24,6 +24,10 @@ body{
 ul{
 	list-style: none;
 }
+a{
+	color: inherit;
+	text-decoration: none;
+}
 
 .d-none{
 	display: none;
@@ -98,7 +102,7 @@ header{
 	color : var(--base-text-light);
 	background-color: var(--primary-color);
 	text-align: center;
-	width: 15rem;		/* 1000px의 30% 크기 , 300px / 20px = 15rem 로 렌더링 */
+	width: 18rem;		/* 1000px의 30% 크기 , 300px / 20px = 15rem 로 렌더링 */
 	margin: 0 auto;
 	padding : .5rem 0;	/* top bottom 각각 10px 패딩 */
 }
@@ -133,20 +137,85 @@ header{
 	font-size: 2rem;
 }
 
+/* ========================= section > article : new-item ============================  */
 
+.items-list{
+	display: flex;
+}
+.items-list img:nth-of-type(1){
+	width: 30rem;
+	object-fit: cover;
+}
+.items-list button{
+	border: 1px solid var(--base-text-dark, black);
+	border-radius: 1.5rem;
+	font-size: .8rem;
+	color: var(--base-text-dark, black);
+	padding: .5rem 1rem;
+}
+/* ========================= aside ============================  */
+.aside-bg{
+	min-height: 300px;
+	background-image:url("../images/company.png"), url("../images/company_bg.jpg");
+	background-size: contain, cover;
+	background-repeat: no-repeat, repeat-x;
+	background-position: right bottom, left bottom;	
+}
+.aside .container{
+	overflow: hidden;
+}
+aside .container .catch-title{
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--special-text-color, #193f5c);
+	margin: 3rem 0 1rem 0;
+}
+aside .container .catch-desc{
+	font-size: 1.5rem;
+	color: var(--special-text-color, #193f5c);
+}
 
+.w500{
+	font-weight: 500
+}
+.w300{
+	font-weight: 300
+}
 
+/* ========================= extras ============================  */
+.extras{
+	background-color: var(--extras-bg-color, #f5f5f5);
+}
+.extras .container{
+	display: flex;
+	justify-content: space-between;
+}
+.contact{
+	font-size: 1rem;
+	font-weight: 700;
+	align-self: center;
+	color: var(--contact-number-color, #e86708);
+}
+.contact::before{
+	content: '';
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	background-image: url("../images/icon_call.png");
+	vertical-align: sub;
+}
 
-
-
-
-
-
-
-
-
-
-
+/* ========================= footer ============================  */
+footer .container{
+	padding: 2rem 0;
+	text-align: center;
+}
+footer .container h3{
+	margin: 1rem 0;
+}
+footer .container p:nth-of-type(3){
+	margin: 1rem 0 0 0;
+}
 
 
 
