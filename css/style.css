@@ -2,6 +2,8 @@
 
 :root{
 	--base-text-color: #666;
+	--base-text-light: #fff;
+	--primary-color: #1e598c;
 }
 
 *{
@@ -19,9 +21,14 @@ body{
 	color: var(--base-text-color);
 }
 
+ul{
+	list-style: none;
+}
+
 .d-none{
 	display: none;
 }
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -29,6 +36,7 @@ body{
   'GRAD' 0,
   'opsz' 48
 }
+
 .container{
 	max-width: 1000px;
 	margin: 0 auto;
@@ -45,7 +53,6 @@ button{
 	outline : none;
 }
 
-
 /* ========================= header ============================  */
 header{
 	background-image: url("../images/visual_bg.jpg");
@@ -59,7 +66,7 @@ header{
 }
 .burger{
 	right: 0;
-	top: 0;
+	top: 2rem;
 }
 .slogan_text{
 	margin : 230px auto 0;
@@ -67,14 +74,64 @@ header{
 	height: 243px;
 }
 
+/* ========================= section > article ============================  */
+.system-bg{
+	background-image: url("../images/system_bg.jpg");
+	background-repeat: repeat-x;
+	background-size: cover;
+	overflow: hidden;
+}
 
+.title{
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: var(--primary-color);
+	border-bottom: 1px solid var(--primary-color);
+	margin: 2.5rem 0 0 0;	/* top right bottom left 순서로 margin 적용 */
+	padding: 0 0 .5rem 0;	/* top right bottom left 순서로 padding 적용 */
+}
 
-
-
-
-
-
-
+.sub-title{
+	font-size: 1rem;
+	font-weight: 500px;
+	color : var(--base-text-light);
+	background-color: var(--primary-color);
+	text-align: center;
+	width: 15rem;		/* 1000px의 30% 크기 , 300px / 20px = 15rem 로 렌더링 */
+	margin: 0 auto;
+	padding : .5rem 0;	/* top bottom 각각 10px 패딩 */
+}
+.system-list{
+	display: flex;
+	column-gap: 1rem;
+	margin: 3rem 0;
+}
+.system-list li{
+	border-radius: 50%;
+	overflow: hidden;
+}
+.system-list li:hover .overlay{
+	display: flex;	/* flex: (block)flex, inline-flex */
+}
+.system-list .overlay{
+	background-color:  rgba(0,0,0,.3);
+	color: var(--base-text-light);
+	width: 100%;
+	height: 100%;
+}
+.overlay{
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;		/* flex 기본정렬 : row(=행)를 column(=열)로 변경 */
+}
+.over-title{
+	font-size: 1.5rem;
+}
+.over-title + .material-symbols-outlined{	/* + : 다음 형제 요소, ~ : 다음 형제들 요소 */
+	font-size: 2rem;
+}
 
 
 
