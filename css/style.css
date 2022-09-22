@@ -36,7 +36,7 @@ body{
 .pos-relative{
 	position: relative;
 }
-pos-absolute{
+.pos-absolute{
 	position: absolute;
 }
 button{
@@ -54,12 +54,17 @@ header{
 	background-size: cover;
 	height: 950px;
 }
-.logo{
+.logo img{
 	margin: 2rem 0 0 0;
 }
 .burger{
 	right: 0;
-	top: 1rem;
+	top: 0;
+}
+.slogan_text{
+	margin : 230px auto 0;
+	width: 533px;
+	height: 243px;
 }
 
 
