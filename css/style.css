@@ -144,7 +144,7 @@ header{
 	flex-direction: column;
 	align-items: center;
 }
-.new-item img:nth-of-type(1){
+.new-item > img:nth-of-type(1){
 	width: 30rem;
 	object-fit: cover;
 }
@@ -164,9 +164,11 @@ header{
    top: 0;
    left: 0;
    overflow: hidden;
+   margin-top: 1rem;
 }
 .detail{
 	display: flex;
+	column-gap : 1.5rem;
 }
 .img-detail{
 	flex: 4;
@@ -174,6 +176,12 @@ header{
 	display: flex;
 	flex-direction: column;
 	height : 400px;
+	row-gap: .5rem;
+}
+.img-detail img{
+	/* max-width: 100%; */
+	width: 100%;
+	object-fit: cover;	/* contain, fill, cover[aspect ratio] : css3 */	
 }
 .big-img{
 	flex: 7;
@@ -183,13 +191,30 @@ header{
 	flex: 3;
 	overflow: hidden;
 	display: flex;
+	column-gap: .5rem;
 }
 .small-img li{
 	flex: 1;
 	overflow: hidden;
 }
+.small-img li img{
+	border: 5px solid transparent;
+	box-sizing : border-box;	
+}
+.small-img li:hover{
+	border: 5px solid dodgerblue;
+}
 .text-detail{
 	flex: 6;
+	background-color : var(--gray-color, #efefef);
+}
+.text-detail p{
+	margin: .5rem;
+}
+.text-detail ul{
+	list-style: inside sqaure;		/* 목록기호 : 사각형*/
+	margin: 0 0 0 3rem;
+	
 }
 #close {
 	position:absolute;
