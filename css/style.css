@@ -30,7 +30,7 @@ a{
 }
 
 .d-none{
-	display: none;
+	display: none !important;
 }
 
 .material-symbols-outlined {
@@ -144,11 +144,11 @@ header{
 	flex-direction: column;
 	align-items: center;
 }
-.new-item img{
+.new-item img:nth-of-type(1){
 	width: 30rem;
 	object-fit: cover;
 }
-.rounded-rect{
+ .rounded-rect{
 	width: 10rem;
 	border: 1px solid var(--base-text-dark, black);
 	border-radius: 1.5rem;
@@ -164,6 +164,32 @@ header{
    top: 0;
    left: 0;
    overflow: hidden;
+}
+.detail{
+	display: flex;
+}
+.img-detail{
+	flex: 4;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	height : 400px;
+}
+.big-img{
+	flex: 7;
+	overflow: hidden;
+}
+.small-img{
+	flex: 3;
+	overflow: hidden;
+	display: flex;
+}
+.small-img li{
+	flex: 1;
+	overflow: hidden;
+}
+.text-detail{
+	flex: 6;
 }
 #close {
 	position:absolute;
