@@ -51,6 +51,9 @@ a{
 .pos-absolute{
 	position: absolute;
 }
+.pos-fixed{
+	position: fixed;
+}
 button{
 	background-color: transparent;
 	border: 0;
@@ -58,7 +61,7 @@ button{
 }
 
 /* ========================= header ============================  */
-header{
+header .main-header{	/* header 태그중 클래스값이 main-header인 */
 	background-image: url("../images/visual_bg.jpg");
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -229,6 +232,16 @@ header{
    	border-radius: 50%;
    	text-align : center;
 }
+/* ========================= sidePanel ============================  */
+#sidePanel{
+	background-color: dodgerblue;
+	min-width: 20rem;
+	height: 100%;
+	right: 0;
+	top: 0; 
+}
+
+
 /* ========================= aside ============================  */
 .aside-bg{
 	min-height: 300px;
