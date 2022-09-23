@@ -139,19 +139,44 @@ header{
 
 /* ========================= section > article : new-item ============================  */
 
-.items-list{
+.new-item{
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-.items-list img:nth-of-type(1){
+.new-item img{
 	width: 30rem;
 	object-fit: cover;
 }
-.items-list button{
+.rounded-rect{
+	width: 10rem;
 	border: 1px solid var(--base-text-dark, black);
 	border-radius: 1.5rem;
 	font-size: .8rem;
 	color: var(--base-text-dark, black);
 	padding: .5rem 1rem;
+	
+}
+.item-detail {
+   width: 100%;
+   height: 100%;
+   background-color: var(--base-text-light);
+   top: 0;
+   left: 0;
+   overflow: hidden;
+}
+#close {
+	position:absolute;
+   	right: 2%;
+  	top: 2%;
+  	background-color: #000;
+  	color: var(--base-text-light, white);
+  	font-size: 2rem;
+   	padding: .5rem 1rem;
+   	width: 64px;
+   	height:64px;
+   	border-radius: 50%;
+   	text-align : center;
 }
 /* ========================= aside ============================  */
 .aside-bg{
