@@ -3,6 +3,7 @@
 :root{
 	--base-text-color: #666;
 	--base-text-light: #fff;
+	--base-color-dark: black;
 	--primary-color: #1e598c;
 }
 
@@ -61,7 +62,7 @@ button{
 }
 
 /* ========================= header ============================  */
-header .main-header{	/* header 태그중 클래스값이 main-header인 */
+header.main-header{	/* header 태그중 클래스값이 main-header인 */
 	background-image: url("../images/visual_bg.jpg");
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -72,8 +73,10 @@ header .main-header{	/* header 태그중 클래스값이 main-header인 */
 	margin: 2rem 0 0 0;
 }
 .burger{
+	position:fixed;
 	right: 0;
 	top: 2rem;
+	z-index: 1002;
 }
 .slogan_text{
 	margin : 230px auto 0;
@@ -232,16 +235,51 @@ header .main-header{	/* header 태그중 클래스값이 main-header인 */
    	border-radius: 50%;
    	text-align : center;
 }
-/* ========================= sidePanel ============================  */
-#sidePanel{
-	background-color: dodgerblue;
-	min-width: 20rem;
-	height: 100%;
-	right: 0;
-	top: 0; 
+
+/* ========================= screen ============================  */
+.screen{
+	position: fixed;
+	background-color: rgba(0,0,0,.4);
+	width: 100vw;	/* 100 % */
+	height: 100vh;	/* 100 % */
+	z-index: 1000;
 }
 
 
+/* ========================= sidePanel ============================  */
+#sidePanel{
+	background-color: dodgerblue;
+	width: 17rem;
+	height: 80%;
+	right: 0;
+	top: 0; 
+	color: var(--text-color-light, white);
+	transition : all 0.3s;
+	z-index: 1001;
+}
+.side-header{
+	padding: 0 0 0 1rem;
+	text-transform: uppercase;
+}
+.side-header h2{
+	font-size: 2rem;
+}
+.side-header h2 + p{
+	font-size: 1.25rem;
+}
+/* #close{
+	position: absolute;
+	right: calc(14rem + 25px);
+	width: 50px;
+	height: 50px;
+	color : var(--base-color-dark, black);
+	background-color: var(--base-text-light, white);
+	box-shadow: .2rem .2rem 1px 0 rgba(0,0,0,.4);	x y shadow outside color 그림자 효과
+} */
+.collapse{
+	width: 0 !important;
+	overflow : hidden;
+}
 /* ========================= aside ============================  */
 .aside-bg{
 	min-height: 300px;
